@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9,00"
-	Name="HashTable"
-	ProjectGUID="{AC699463-AD15-441D-A5B4-DBC267E72765}"
-	RootNamespace="HashTable"
+	Name="Queue1"
+	ProjectGUID="{74EAD741-B574-4CF2-A75E-AF11F8081CCB}"
+	RootNamespace="Queue1"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
@@ -171,7 +171,7 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\HashTable.cpp"
+				RelativePath=".\Queue1.h"
 				>
 			</File>
 		</Filter>
@@ -181,11 +181,7 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\HashTable.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Node.h"
+				RelativePath=".\Queue1.cpp"
 				>
 			</File>
 		</Filter>
