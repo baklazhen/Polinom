@@ -1,6 +1,7 @@
 #ifndef _HASHTABLE_H_
 #define _HASHTABLE_H_
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 #include "Node.h"
@@ -20,7 +21,8 @@ Table(const Table& ht);//конструктор копирования
 Table& operator=(const Table& ht);//присваивание
 void Add(DATA v, KEY k);
 void Del(KEY k);
-void resize (int s); //изменение рзмера
+void resize (int s); //изменение размера
+void saveToFile ();
 
 friend ostream& operator<<(ostream &out, Table &ht)
   {
@@ -221,6 +223,33 @@ void Table<KEY, DATA>::resize (int s)
 		
 		
 }
+
+template <class KEY, class DATA>
+void Table <KEY, DATA>::saveToFile ()
+{
+	Node <KEY, DATA> * tmp;
+	ofstream fout;
+    fout.open("Tablica.txt");
+	for (int i = 0; i < size; i++)
+	{
+		if (mas[i] != 0)
+		{	
+			tmp = mas[i];
+					fout << i << "    ";
+					while (tmp != 0)
+					{
+						fout << tmp->GetData() << "  ";
+						tmp = tmp->GetNext();
+					}
+					fout << '\n';
+		}
+	}
+				
+	  
+   fout.close();
+}
+
+
 
 
 

@@ -1,6 +1,7 @@
 
 #include "HashTableList.h"
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 
@@ -30,6 +31,7 @@ int main ()
 	H.resize (14);
 	cout << H << '\n';
 	H.Del (2);
+	H.saveToFile();
 	
 	
 
