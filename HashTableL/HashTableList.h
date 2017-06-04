@@ -30,14 +30,9 @@ friend ostream& operator<<(ostream &out, Table &ht)
 			for (int i = 0; i < ht.size; i++)
 			{
 				if (ht.mas[i] != 0)
-				{
-														
-					out << i << "    ";
-				(ht.mas[i])->PrintList (); 
-				out << '\n';
-				}
-			
+					(ht.mas[i])->PrintList (); 
 				
+						
 			}
 
 			return out;
@@ -235,13 +230,13 @@ void Table <KEY, DATA>::saveToFile ()
 		if (mas[i] != 0)
 		{	
 			tmp = mas[i];
-					fout << i << "    ";
+					
 					while (tmp != 0)
 					{
-						fout << tmp->GetData() << "  ";
+						fout << tmp->GetData() << "  " << tmp->GetKey () << '\n';
 						tmp = tmp->GetNext();
 					}
-					fout << '\n';
+					
 		}
 	}
 				

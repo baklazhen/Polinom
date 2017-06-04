@@ -1,6 +1,7 @@
 #ifndef _NODE_H_
 #define _NODE_H_
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 template <class KEY, class DATA>
@@ -23,6 +24,7 @@ public:
 	Node *GetNext ();
 	void SetNext (Node *nd);
 	void PrintList();
+	
 		
 };
 
@@ -104,7 +106,7 @@ void Node <KEY, DATA>::PrintList()
 	tmp = this;
 	while (tmp != 0)
 	{
-		cout << tmp->val << "  ";
+		cout << tmp->k << "  " << tmp->val << '\n';
 		tmp = tmp->Next;
 	}
 }

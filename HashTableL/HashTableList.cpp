@@ -11,7 +11,6 @@ int main ()
 	
 	Table <int, int> H (10);
 	H.Add (9, 10);
-	H.Add (14, 12);
 	H.Add (4, 13);
 	H.Add (7, 16);
 	H.Add (28, 12);
@@ -23,15 +22,15 @@ int main ()
 	H.Add (16, 8);
 	H.Add (5, 22);
 	H.Add (8, 32);
-	H.Add (2, 12);
 	cout << H << '\n';
+	H.saveToFile();
 	H.Del (12);
 	cout << H << '\n';
 	
 	H.resize (14);
 	cout << H << '\n';
 	H.Del (2);
-	H.saveToFile();
+	
 	
 	
 
