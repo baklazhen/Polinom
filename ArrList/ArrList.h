@@ -1,5 +1,6 @@
 #ifndef _ARRLIST_H_
 #define _ARRLIST_H_
+#include <fstream>
 
 #include <iostream>
 
@@ -29,6 +30,7 @@ public:
 	 void AddLast (T a);
 	 void DelLast ();
 	 void PrintList ();
+	 void SaveToFile ();
 	 
      
 };
@@ -161,6 +163,47 @@ void ArrList <T>:: PrintList ()
 		
 	}
 	cout << '\n';
+}
+
+template <class T>
+void ArrList <T>:: SaveToFile ()
+{
+	ofstream fout;
+    fout.open("List.txt");
+
+	int d = start;
+	
+	for (int i = 0; i < 2; i++)
+	{
+		fout << Value [d] << "  ";
+		d = Next [d];
+	}
+
+	ArrList <int> B (3);
+	for (int i = 0; i < size; i++)
+	{
+		if (Next [i] == end)
+			for (int j = 0; j < size; j++)
+				if (Next [j] == i)
+				{
+					B.AddFirst (Value[j]);
+					B.AddLast (Value[i]);
+					B.AddLast (Value[end]);
+								
+
+				}
+
+	}
+	for (int i = 0; i < 3; i++)
+	{
+		fout << B.Value [i] << "  ";
+		
+	}
+
+
+				
+	  
+   fout.close();
 }
 
 
