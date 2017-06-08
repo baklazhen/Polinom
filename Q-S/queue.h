@@ -144,6 +144,7 @@ void Queue<T>::resize()
 {
 	int * tmp;
 	tmp = saveTomas();
+	delete [] mas;
 	size = size*2;
 	mas = new T [size];
 	for (int i=0; i<size; i++)
