@@ -147,7 +147,7 @@ void Queue<T>::resize()
 	delete [] mas;
 	size = size*2;
 	mas = new T [size];
-	for (int i=0; i<size; i++)
+	for (int i=0; i<count; i++)
 		mas [i] = tmp [i];
 
 	
